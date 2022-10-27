@@ -9,7 +9,7 @@ const generatePost = () => {
     }
 
     // testear
-    // console.log(post)
+     //console.log(post)
     
     return post
 }
