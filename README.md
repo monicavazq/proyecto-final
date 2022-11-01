@@ -57,3 +57,11 @@ npm i express-handlebars
 
 ### Framework HTML/CSS
 
+
+ ## Instalación de librerias
+
+ ```sh
+npm i connect-mongo express-session pass
+port passport-local
+
+```
