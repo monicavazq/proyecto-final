@@ -1,17 +1,18 @@
 const { response } = require('express')
 const Post = require('../models/posts')
-//index
-const getPosts = async (req, res) => {
+
+// mostrar los post en cards
+const traerPostCard = async (req, res = response)  => {
 
     try {
 
         const posts = await Post.find({}).lean()
         // console.log(posts)
-        const title = "InfoBlog - Listado de Posts"
-        res.status(200).render('index',
+        const title = "InfoBlog - Inicio"
+        res.status(200).render('home',
             {
                 title,
-                posts
+                posts,
             }
         )
 
@@ -20,6 +21,24 @@ const getPosts = async (req, res) => {
 
     }
 }
+
+
+//index
+const getPosts = async (req, res) => {
+    try {
+        const posts = await Post.find({}).lean()
+        // console.log(posts)
+        const title = "InfoBlog - Listado de Post";
+        res.status(200).render("index",
+            {
+                title,
+                posts,
+            });
+    } catch (error) {
+        console.log('Error index', error)
+    }
+};
+
 // show
 const showPost = async (req, res = response) => {
     try {
@@ -92,5 +111,6 @@ module.exports = {
     deletePost,
     newPost,
     createPost,
-    showPostForm
+    showPostForm,
+    traerPostCard
 }

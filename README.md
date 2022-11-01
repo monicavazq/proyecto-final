@@ -1,3 +1,22 @@
+## Pasos para arrancar el proyecto
+
+tenet disponible la carpeta data/ (drive. Archivo Final-proyect) y el .env
+
+renombrar el .env.example y colocar los datos personales.
+
+Luego levantar la base de datos en el cmd de windows
+
+```sh
+mongod -- dbpath= "C:\Users\monic\OneDrive\Documentos\BOOTCAMP\proyecto-final\data"
+
+```
+
+Luego levantar el servidor
+
+```sh
+npm run dev
+```
+
 ## DONTENV
 <https://www.npmjs.com/package/dotenv>
 

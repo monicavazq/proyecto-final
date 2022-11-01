@@ -1,0 +1,31 @@
+<div class="col">
+    <form action="/auth/signup" method="POST">
+        {{!--nombre --}}
+        <div class="mb-3">
+            <label for="name" class="form-label">Email address</label>
+            <input type="text" class="form-control" id="name"  name="name" placeholder="Ingrese su nombre">
+        </div>
+
+         {{!-- correo --}}
+        <div class="mb-3">
+           <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email"  name="email" placeholder="Ingrese su email">
+        </div>
+
+         {{!-- password --}}
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="text" class="form-control" id="password"  name="password" placeholder="Ingrese su contraseña">
+        </div>
+
+         {{!--confirm password --}}
+        <div class="mb-3">
+            <label for="confirm_password" class="form-label">Confirmación de contraseña</label>
+            <input type="text" class="form-control" id="confirm_password"  name="confirm_password" placeholder="Repita su contraseña">
+        </div>
+
+        <button class="btn btn-primary">
+            SignUp
+        </button>
+    </form>
+</div>
