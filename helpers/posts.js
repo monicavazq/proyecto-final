@@ -13,6 +13,7 @@ const generatePost = () => {
     
     return post
 }
+generatePost()
 
 module.exports = {
     generatePost

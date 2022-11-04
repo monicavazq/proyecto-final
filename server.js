@@ -46,8 +46,11 @@ app.use(flash())
 app.use((req, res, next)=>{
     res.locals.todo_ok = req.flash('todo_ok')
     res.locals.todo_error = req.flash('todo_error')
+    res.locals.user = req.user || null
     next()
 })
+
+
 
 // Routes
 app.use('/', routerAuth)

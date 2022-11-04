@@ -11,7 +11,7 @@ const signup = async (req, res = response) => {
     const { name, email, password, confirm_password } = req.body
 
     if (password !== confirm_password) {
-        errors.push({ msg: ' La contraseña no machea.' })
+        errors.push({ msg: ' La contraseña no coincide.' })
     }
 
     if (password.length < 4) {
@@ -51,6 +51,10 @@ const signin = passport.authenticate('local', {
     failureFlash: true,
 })
 
+const profile = (req, res = response) => {
+    const { name, email} = req.user    
+    res.json({name,email})
+}
 
 const logout = async(req, res = response, next) => {    
 await req.logout((err) => {
@@ -64,5 +68,6 @@ module.exports = {
     signup,
     showAuthFormSignIn,
     signin,
-    logout
+    logout,
+    profile
 }
